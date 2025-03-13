@@ -15,6 +15,7 @@
             $result_count = $conn->query($sql_count);
             $row_count = $result_count->fetch_assoc();
             $totale_attori = $row_count["totale_attori"];
+            $num_attori = $_GET["num_attori"];
             
             if ($num_attori > $totale_attori) {
                 echo "<h3>Il numero fornito è maggiore rispetto al numero totale degli attori. Saranno mostrati solo $totale_attori attori</h3>";
@@ -54,6 +55,6 @@
             } else {
                 echo "<p>Nessun attore trovato.</p>";
             }
-            ?>
+        ?>
     </body>
 </html>
